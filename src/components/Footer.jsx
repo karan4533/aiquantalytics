@@ -118,7 +118,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-4 text-sm text-gray-400">
-          <p>Phone: <a href="tel:+919791306877" className="hover:text-[#99f2c8] transition-colors">+91-9791306877</a></p>
+          <p>Phone: <a href="tel:+919791306877" className="hover:text-[#99f2c8] transition-colors">+91-7010737331</a></p>
           <p>Email: <a href="mailto:hr@aiquantalytics.in" className="hover:text-[#99f2c8] transition-colors">hr@aiquantalytics.in</a></p>
         </div>
       </div>
