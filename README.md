@@ -10,6 +10,32 @@ A modern, responsive website built with React, featuring smooth animations, mode
 - **Modern UI/UX**: Glassmorphism, gradient effects, and smooth scrolling
 - **Interactive Components**: Carousels, accordions, and animated counters
 - **Optimized Performance**: Fast load times with Vite
+- **SEO Optimized**: Comprehensive meta tags and Open Graph support
+- **Accessibility**: WCAG compliant with keyboard navigation support
+
+## 🎓 New: AIQuantalytics Learning
+
+**15 Professional Courses Available:**
+- Python for Beginners
+- Artificial Intelligence
+- AI & Machine Learning
+- Generative AI and LLM
+- Agentic AI
+- Google Cloud (GCP)
+- AWS Cloud
+- Microsoft Azure Cloud
+- Data Analytics
+- Digital Marketing
+- Data Engineering
+- DevOps/MLOps
+- Full Stack Development
+- Mobile App Development
+- C/C++ Java Programming
+
+**Contact for Admission:**
+- 📱 Phone: 7010737331
+- 📧 Email: hr@aiquantalytics.in | aiquantalytics@gmail.com
+- 📍 Location: Hopes, Coimbatore
 
 ## 📦 Installation
 
@@ -38,13 +64,13 @@ npm run preview
 
 ## 🎨 Design Features
 
-- **Hero Section**: Full-screen video background with animated waves
+- **Hero Section**: Full-screen gradient background with smooth animations
+- **Admission Section**: Course catalog with Google Form integration
 - **Service Cards**: Hover effects with gradient icons
 - **Product Showcase**: Modern card layouts with smooth transitions
 - **Team Section**: Card-based layout with reflection effects
-- **Carousels**: Auto-playing sliders for advisors, team, and clients
-- **FAQ Accordion**: Smooth expand/collapse animations
-- **Contact Form**: Modern design with Google Maps integration
+- **Contact Form**: Enhanced with loading states and error handling
+- **Careers Form**: Professional application form with file upload
 - **Responsive Navigation**: Mobile-friendly hamburger menu
 
 ## 🛠️ Technologies Used
@@ -54,8 +80,8 @@ npm run preview
 - **Tailwind CSS**: Utility-first CSS framework
 - **Framer Motion**: Animation library
 - **React Router**: Client-side routing
-- **Swiper**: Modern carousel/slider
 - **React Icons**: Icon library
+- **React Intersection Observer**: Scroll animations
 
 ## 📱 Responsive Breakpoints
 
@@ -65,26 +91,47 @@ npm run preview
 
 ## 🎯 Key Sections
 
-1. **Home**: Hero with video background
+1. **Home**: Hero with gradient background
 2. **About**: Company introduction
 3. **Services**: Six core service offerings
 4. **Stats**: Animated statistics counter
 5. **Products**: Product showcase
-6. **Team**: Leadership and team members
-7. **Advisory**: Advisory board and experts
-8. **Clients**: Client logos carousel
-9. **Contact**: Contact form with map
-10. **FAQ**: Frequently asked questions
-11. **Careers**: Job application form
+6. **CTA**: Call-to-action section
+7. **Admission**: NEW - Course registration
+8. **Team**: Leadership and team members
+9. **Advisory**: Advisory board and experts
+10. **Clients**: Client logos carousel
+11. **Contact**: Enhanced contact form with map
+12. **FAQ**: Frequently asked questions
+13. **Careers**: Job application form
 
 ## 🔧 Customization
 
 - **Colors**: Edit `tailwind.config.js` to change the color scheme
 - **Content**: Update component files in `src/components/`
 - **Images**: Place images in `public/images/`
-- **Fonts**: Configured to use Poppins from Google Fonts
+- **Fonts**: Configured to use Inter from Google Fonts
+- **Google Form**: Update URL in `src/components/Admission.jsx`
+
+## ♿ Accessibility Features
+
+- Skip to main content link
+- Keyboard navigation support
+- Focus-visible styles
+- Reduced motion support
+- Semantic HTML structure
+- ARIA labels
+
+## 🔍 SEO Features
+
+- Comprehensive meta tags
+- Open Graph tags for social sharing
+- Twitter Card support
+- Canonical URLs
+- Structured data ready
 
 ## 📄 License
 
-Copyright © 2021 AIQuantalytics. All Rights Reserved.
+Copyright © 2025 AIQuantalytics. All Rights Reserved.
 
+**Designed & Developed by Karan**
