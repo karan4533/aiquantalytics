@@ -67,7 +67,7 @@ const Admission = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mb-12 max-w-6xl mx-auto"
         >
-          <h3 className="text-2xl font-bold text-dark-900 mb-6 text-center">Available Courses</h3>
+          <h3 className="text-2xl font-bold text-dark-900 mb-6 text-center">Available Industry Internship & Courses</h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {courses.map((course, index) => (
               <motion.div
