@@ -36,28 +36,32 @@ const Contact = () => {
     setSubmitStatus({ type: '', message: '' })
 
     try {
-      // TODO: Replace with actual API endpoint
-      // const response = await fetch('/api/contact', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(formData)
-      // })
-      
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500))
-      
-    console.log('Form submitted:', formData)
-      
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      const data = await response.json()
+      console.log('API Response:', data)
+
+      if (!response.ok || !data.success) {
+        throw new Error(data.message || 'Network response was not ok')
+      }
+
       setSubmitStatus({
         type: 'success',
-        message: 'Thank you for contacting us! We will get back to you soon.'
+        message: 'Thank you for contacting us! Your message has been emailed to our team.',
       })
-      
-    setFormData({ name: '', phone: '', email: '', message: '' })
+
+      setFormData({ name: '', phone: '', email: '', message: '' })
     } catch (error) {
+      console.error('Error submitting contact form:', error)
       setSubmitStatus({
         type: 'error',
-        message: 'Something went wrong. Please try again or email us directly.'
+        message: error.message || 'Something went wrong sending your message. Please try again or email us directly at hr@aiquantalytics.in.',
       })
     } finally {
       setIsSubmitting(false)
@@ -80,8 +84,8 @@ const Contact = () => {
     {
       icon: HiLocationMarker,
       title: 'Office',
-      content: 'Coimbatore, TN - 641062',
-      link: null
+      content: '78B Lakshmi Puram, 6th Street, Masakalipalayam Road, Hopes College, Peelamedu - 641004',
+      link: 'https://maps.app.goo.gl/q4bwzBpt3uskoTNU8'
     },
   ]
 
@@ -148,7 +152,7 @@ const Contact = () => {
             {/* Map */}
             <div className="rounded-2xl overflow-hidden h-64 border border-gray-200">
               <iframe
-                src="https://maps.google.com/maps?q=Coimbatore%2C+Tamil+Nadu+641062%2C+IN&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                src="https://maps.google.com/maps?q=78B%20Lakshmi%20Puram%2C%206th%20Street%2C%20Masakalipalayam%20Road%2C%20Hopes%20College%2C%20Peelamedu%20641004&t=&z=15&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
