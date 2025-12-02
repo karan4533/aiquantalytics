@@ -17,7 +17,6 @@ const Footer = () => {
     ],
     resources: [
       { name: 'Products', path: '/#products' },
-      { name: 'Admission', path: '/#registration' },
       { name: 'Registration', path: '/#registration' },
       { name: 'Contact', path: '/#contact' },
       { name: 'FAQ', path: '/#faq' },
