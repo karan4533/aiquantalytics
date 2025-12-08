@@ -23,7 +23,7 @@ const Hero = () => {
   ]
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative w-full min-h-screen flex items-center justify-center overflow-x-hidden">
       {/* Radio Inputs for Slider Control */}
       <input 
         type="radio" 
@@ -51,10 +51,10 @@ const Hero = () => {
       />
 
       {/* Slides Container */}
-      <div className="slider-container w-full h-full absolute inset-0">
+      <div className="slider-container w-full h-full absolute inset-0 min-h-screen">
         {/* Slide 1 - Innovate, Automate & Transform */}
-        <div className={`frame frame_1 absolute inset-0 transition-opacity duration-700 ${currentSlide === 1 ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}>
-          <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div className={`frame frame_1 absolute inset-0 w-full h-full min-h-screen transition-opacity duration-700 ${currentSlide === 1 ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}>
+          <div className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
             {/* Background with gradient overlay */}
             <div className="absolute inset-0 bg-gradient-to-br from-[#1f4037] via-[#2d5a4a] to-[#99f2c8]"></div>
             
@@ -71,8 +71,8 @@ const Hero = () => {
               backgroundSize: '50px 50px'
             }}></div>
 
-            <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-24 pb-12 sm:py-20 lg:py-24">
-              <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-20 sm:pt-24 pb-16 sm:pb-20 lg:py-24">
+              <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
                 {/* Left Content */}
                 <motion.div
                   initial={{ opacity: 0, x: -50 }}
@@ -85,13 +85,13 @@ const Hero = () => {
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
-                    className="inline-flex items-center gap-3 px-5 py-2.5 bg-white/25 backdrop-blur-md border border-white/40 text-white rounded-full text-sm font-semibold mb-8 shadow-lg"
+                    className="inline-flex items-center gap-2 sm:gap-3 px-3 sm:px-5 py-2 sm:py-2.5 bg-white/25 backdrop-blur-md border border-white/40 text-white rounded-full text-xs sm:text-sm font-semibold mb-6 sm:mb-8 shadow-lg"
                   >
-                    <span className="flex items-center gap-2 px-3 py-1 bg-white text-[#1f4037] rounded-full text-xs font-bold">
-                      <HiSparkles className="text-yellow-500" />
+                    <span className="flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-0.5 sm:py-1 bg-white text-[#1f4037] rounded-full text-xs font-bold">
+                      <HiSparkles className="text-yellow-500 text-xs sm:text-sm" />
                       New
                     </span>
-                    <span>🚀 Innovation Partner</span>
+                    <span className="whitespace-nowrap">🚀 Innovation Partner</span>
                   </motion.div>
 
                   {/* Main Heading with varied font weights */}
@@ -99,14 +99,14 @@ const Hero = () => {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.3 }}
-                    className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-[1.15] tracking-tight drop-shadow-lg"
+                    className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 sm:mb-8 leading-[1.1] sm:leading-[1.15] tracking-tight drop-shadow-lg break-words"
                   >
                     <span className="font-light">Innovate,</span>{' '}
                     <span className="relative inline-block">
                       <span className="relative z-10 font-extrabold">Automate</span>
-                      <span className="absolute bottom-1 sm:bottom-2 left-0 w-full h-3 sm:h-4 bg-[#99f2c8]/70 -z-0 rounded"></span>
+                      <span className="absolute bottom-0.5 sm:bottom-1 md:bottom-2 left-0 w-full h-2 sm:h-3 md:h-4 bg-[#99f2c8]/70 -z-0 rounded"></span>
                     </span>
-                    <br />
+                    <br className="hidden sm:block" />
                     <span className="font-semibold">& Transform</span>
                   </motion.h1>
 
@@ -115,7 +115,7 @@ const Hero = () => {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.4 }}
-                    className="text-lg sm:text-xl lg:text-2xl text-white/95 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed tracking-wide drop-shadow"
+                    className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/95 mb-6 sm:mb-8 lg:mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed tracking-wide drop-shadow px-2 sm:px-0"
                   >
                     Your Partner in <span className="font-semibold">AI/ML</span>, <span className="font-semibold">Gen AI</span>, <span className="font-semibold">Cloud Solutions</span> & <span className="font-semibold">Data Science</span>
                   </motion.p>
@@ -125,7 +125,7 @@ const Hero = () => {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.5 }}
-                    className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start mb-10 sm:mb-12"
+                    className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start mb-8 sm:mb-10 lg:mb-12"
                   >
                     <motion.button
                       whileHover={{ scale: 1.05, boxShadow: '0 20px 40px rgba(0,0,0,0.2)' }}
@@ -136,10 +136,10 @@ const Hero = () => {
                           element.scrollIntoView({ behavior: 'smooth', block: 'start' })
                         }
                       }}
-                      className="group inline-flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-10 py-4 sm:py-5 bg-white text-[#1f4037] text-base sm:text-lg font-bold rounded-full hover:bg-gray-50 transition-all duration-300 shadow-2xl cursor-pointer"
+                      className="group inline-flex items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 bg-white text-[#1f4037] text-sm sm:text-base lg:text-lg font-bold rounded-full hover:bg-gray-50 transition-all duration-300 shadow-2xl cursor-pointer w-full sm:w-auto"
                     >
                       Contact Now
-                      <HiArrowRight className="text-lg sm:text-xl group-hover:translate-x-1 transition-transform" />
+                      <HiArrowRight className="text-base sm:text-lg lg:text-xl group-hover:translate-x-1 transition-transform" />
                     </motion.button>
 
                     <motion.button
@@ -151,7 +151,7 @@ const Hero = () => {
                           element.scrollIntoView({ behavior: 'smooth', block: 'start' })
                         }
                       }}
-                      className="inline-flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-10 py-4 sm:py-5 bg-white/10 backdrop-blur-sm border-2 border-white/50 text-white text-base sm:text-lg font-semibold rounded-full hover:border-white transition-all duration-300 cursor-pointer"
+                      className="inline-flex items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 bg-white/10 backdrop-blur-sm border-2 border-white/50 text-white text-sm sm:text-base lg:text-lg font-semibold rounded-full hover:border-white transition-all duration-300 cursor-pointer w-full sm:w-auto"
                     >
                       View Our Work
                     </motion.button>
@@ -162,32 +162,32 @@ const Hero = () => {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.6 }}
-                    className="flex flex-wrap justify-center lg:justify-start gap-4 sm:gap-6 lg:gap-8"
+                    className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4 md:gap-6 lg:gap-8"
                   >
                     <div className="flex items-center gap-2 sm:gap-3">
-                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
-                        <HiLightningBolt className="text-xl sm:text-2xl text-yellow-300" />
+                      <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center flex-shrink-0">
+                        <HiLightningBolt className="text-lg sm:text-xl md:text-2xl text-yellow-300" />
                       </div>
                       <div>
-                        <span className="text-2xl sm:text-3xl font-bold text-white block">203+</span>
+                        <span className="text-xl sm:text-2xl md:text-3xl font-bold text-white block">203+</span>
                         <span className="text-white/80 text-xs sm:text-sm font-medium">Projects</span>
                       </div>
                     </div>
                     <div className="flex items-center gap-2 sm:gap-3">
-                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
-                        <HiUsers className="text-xl sm:text-2xl text-green-300" />
+                      <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center flex-shrink-0">
+                        <HiUsers className="text-lg sm:text-xl md:text-2xl text-green-300" />
                       </div>
                       <div>
-                        <span className="text-2xl sm:text-3xl font-bold text-white block">90+</span>
+                        <span className="text-xl sm:text-2xl md:text-3xl font-bold text-white block">90+</span>
                         <span className="text-white/80 text-xs sm:text-sm font-medium">Happy Clients</span>
                       </div>
                     </div>
                     <div className="flex items-center gap-2 sm:gap-3">
-                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
-                        <HiClock className="text-xl sm:text-2xl text-blue-300" />
+                      <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center flex-shrink-0">
+                        <HiClock className="text-lg sm:text-xl md:text-2xl text-blue-300" />
                       </div>
                       <div>
-                        <span className="text-2xl sm:text-3xl font-bold text-white block">4+</span>
+                        <span className="text-xl sm:text-2xl md:text-3xl font-bold text-white block">4+</span>
                         <span className="text-white/80 text-xs sm:text-sm font-medium">Years</span>
                       </div>
                     </div>
@@ -198,10 +198,10 @@ const Hero = () => {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.7 }}
-                    className="hidden sm:block mt-8 sm:mt-10 pt-6 sm:pt-8 border-t border-white/20 lg:-ml-4"
+                    className="hidden sm:block mt-6 sm:mt-8 lg:mt-10 pt-4 sm:pt-6 lg:pt-8 border-t border-white/20 lg:-ml-4"
                   >
-                    <p className="text-white/60 text-xs sm:text-sm font-medium mb-3 sm:mb-4 text-center lg:text-left">Trusted by leading institutions</p>
-                    <div className="flex items-center justify-center lg:justify-start gap-3 sm:gap-4 flex-wrap">
+                    <p className="text-white/60 text-xs sm:text-sm font-medium mb-2 sm:mb-3 lg:mb-4 text-center lg:text-left">Trusted by leading institutions</p>
+                    <div className="flex items-center justify-center lg:justify-start gap-2 sm:gap-3 lg:gap-4 flex-wrap">
                       {clientLogos.map((logo, index) => (
                         <motion.img
                           key={index}
@@ -286,8 +286,8 @@ const Hero = () => {
         </div>
 
         {/* Slide 2 - Data & Analytics */}
-        <div className={`frame frame_2 absolute inset-0 transition-opacity duration-700 ${currentSlide === 2 ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}>
-          <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div className={`frame frame_2 absolute inset-0 w-full h-full min-h-screen transition-opacity duration-700 ${currentSlide === 2 ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}>
+          <div className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
             {/* Background */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700"></div>
             
@@ -465,8 +465,8 @@ const Hero = () => {
         </div>
 
         {/* Slide 3 - Internship Opportunities */}
-        <div className={`frame frame_3 absolute inset-0 transition-opacity duration-700 ${currentSlide === 3 ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}>
-          <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div className={`frame frame_3 absolute inset-0 w-full h-full min-h-screen transition-opacity duration-700 ${currentSlide === 3 ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}>
+          <div className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
             {/* Background */}
             <div className="absolute inset-0 bg-gradient-to-br from-orange-500 via-red-500 to-pink-600"></div>
             

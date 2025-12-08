@@ -4,6 +4,13 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  safelist: [
+    'frame_1',
+    'frame_2',
+    'frame_3',
+    'slider-container',
+    'frame',
+  ],
   theme: {
     extend: {
       colors: {
