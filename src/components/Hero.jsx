@@ -65,10 +65,18 @@ const Hero = () => {
         checked={currentSlide === 3}
         onChange={() => setCurrentSlide(3)}
       />
+      <input 
+        type="radio" 
+        name="hero-slider" 
+        id="slide4" 
+        className="hidden"
+        checked={currentSlide === 4}
+        onChange={() => setCurrentSlide(4)}
+      />
 
       {/* Slides Container */}
       <div className="slider-container w-full h-full absolute inset-0 min-h-screen">
-        {/* Slide 1 - Innovate, Automate & Transform */}
+        {/* Slide 1 - R & D as a Service */}
         <div className={`frame frame_1 absolute inset-0 w-full h-full min-h-screen transition-opacity duration-700 ${currentSlide === 1 ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}>
           <div className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
             {/* Background with gradient overlay */}
@@ -79,6 +87,171 @@ const Hero = () => {
               <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl animate-pulse"></div>
               <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#99f2c8] rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
               <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-white rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+            </div>
+
+            {/* Grid pattern overlay */}
+            <div className="absolute inset-0 opacity-5" style={{ 
+              backgroundImage: 'linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)',
+              backgroundSize: '50px 50px'
+            }}></div>
+
+            <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-20 sm:pt-24 pb-16 sm:pb-20 lg:py-24">
+              <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+                {/* Left Content */}
+                <motion.div
+                  initial={{ opacity: 0, x: -50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8 }}
+                  className="text-center lg:text-left"
+                >
+                  {/* Badge */}
+                  <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                    className="inline-flex items-center gap-2 sm:gap-3 px-3 sm:px-5 py-2 sm:py-2.5 bg-white/25 backdrop-blur-md border border-white/40 text-white rounded-full text-xs sm:text-sm font-semibold mb-6 sm:mb-8 shadow-lg"
+                  >
+                    <span className="flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-0.5 sm:py-1 bg-white text-[#0f2027] rounded-full text-xs font-bold">
+                      <HiSparkles className="text-cyan-500 text-xs sm:text-sm" />
+                      Innovation
+                    </span>
+                    <span className="whitespace-nowrap">🔬 R&D Services</span>
+                  </motion.div>
+
+                  {/* Main Heading */}
+                  <motion.h1 
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                    className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 sm:mb-8 leading-[1.1] sm:leading-[1.15] tracking-tight drop-shadow-lg break-words"
+                  >
+                    <span className="relative inline-block">
+                      <span className="relative z-10 font-extrabold">R & D</span>
+                      <span className="absolute bottom-0.5 sm:bottom-1 md:bottom-2 left-0 w-full h-2 sm:h-3 md:h-4 bg-cyan-400/70 -z-0 rounded"></span>
+                    </span>
+                    <br className="hidden sm:block" />
+                    <span className="font-light">as a </span>
+                    <span className="font-semibold">Service</span>
+                  </motion.h1>
+
+                  {/* Subheading */}
+                  <motion.p 
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.4 }}
+                    className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/95 mb-6 sm:mb-8 lg:mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed tracking-wide drop-shadow px-2 sm:px-0"
+                  >
+                    We support you in <span className="font-bold">PoC and Feasibility Studies</span> by helping interns work on real-world problem statements, build practical prototypes, validate ideas, and gain hands-on experience with industry-relevant technologies.
+                  </motion.p>
+
+                  {/* Service Tags */}
+                  <motion.div 
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.5 }}
+                    className="flex flex-wrap justify-center lg:justify-start gap-3 mb-8 sm:mb-10 lg:mb-12"
+                  >
+                    <span className="px-4 sm:px-5 py-2 sm:py-2.5 bg-white/15 backdrop-blur-sm border border-white/30 text-white text-xs sm:text-sm font-medium rounded-full">
+                      Enterprise AI/GenAI
+                    </span>
+                    <span className="px-4 sm:px-5 py-2 sm:py-2.5 bg-white/15 backdrop-blur-sm border border-white/30 text-white text-xs sm:text-sm font-medium rounded-full">
+                      Agentic AI
+                    </span>
+                    <span className="px-4 sm:px-5 py-2 sm:py-2.5 bg-white/15 backdrop-blur-sm border border-white/30 text-white text-xs sm:text-sm font-medium rounded-full">
+                      MLOps
+                    </span>
+                    <span className="px-4 sm:px-5 py-2 sm:py-2.5 bg-white/15 backdrop-blur-sm border border-white/30 text-white text-xs sm:text-sm font-medium rounded-full">
+                      Intelligent Automation
+                    </span>
+                  </motion.div>
+
+                  {/* CTA Buttons */}
+                  <motion.div 
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.6 }}
+                    className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start"
+                  >
+                    <motion.button
+                      whileHover={{ scale: 1.05, boxShadow: '0 20px 40px rgba(0,0,0,0.2)' }}
+                      whileTap={{ scale: 0.95 }}
+                      onClick={() => {
+                        const element = document.querySelector('#contact')
+                        if (element) {
+                          element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                        }
+                      }}
+                      className="group inline-flex items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 bg-white text-[#0f2027] text-sm sm:text-base lg:text-lg font-bold rounded-full hover:bg-gray-50 transition-all duration-300 shadow-2xl cursor-pointer w-full sm:w-auto"
+                    >
+                      Get Started
+                      <HiArrowRight className="text-base sm:text-lg lg:text-xl group-hover:translate-x-1 transition-transform" />
+                    </motion.button>
+
+                    <motion.button
+                      whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.25)' }}
+                      whileTap={{ scale: 0.95 }}
+                      onClick={() => {
+                        const element = document.querySelector('#services')
+                        if (element) {
+                          element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                        }
+                      }}
+                      className="inline-flex items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 bg-white/10 backdrop-blur-sm border-2 border-white/50 text-white text-sm sm:text-base lg:text-lg font-semibold rounded-full hover:border-white transition-all duration-300 cursor-pointer w-full sm:w-auto"
+                    >
+                      Learn More
+                    </motion.button>
+                  </motion.div>
+                </motion.div>
+
+                {/* Right Visual Element */}
+                <motion.div
+                  initial={{ opacity: 0, x: 50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay: 0.3 }}
+                  className="hidden lg:flex items-center justify-center relative"
+                >
+                  <div className="relative w-full max-w-lg">
+                    <div className="w-80 h-80 mx-auto relative">
+                      <div className="absolute inset-0 rounded-full border-2 border-dashed border-white/30 animate-spin" style={{ animationDuration: '20s' }}></div>
+                      <div className="absolute inset-4 rounded-full bg-gradient-to-br from-white/20 to-transparent backdrop-blur-sm border border-white/20"></div>
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="w-32 h-32 bg-white/20 backdrop-blur-md rounded-3xl flex items-center justify-center shadow-2xl">
+                          <HiLightningBolt className="text-6xl text-white" />
+                        </div>
+                      </div>
+                      <motion.div 
+                        animate={{ y: [0, -15, 0] }}
+                        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                        className="absolute -top-4 left-1/2 -translate-x-1/2 w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/30"
+                      >
+                        <HiDatabase className="text-2xl text-white" />
+                      </motion.div>
+                      <motion.div 
+                        animate={{ y: [0, 15, 0] }}
+                        transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+                        className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/30"
+                      >
+                        <HiSparkles className="text-2xl text-white" />
+                      </motion.div>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Slide 2 - Innovate, Automate & Transform */}
+        <div className={`frame frame_2 absolute inset-0 w-full h-full min-h-screen transition-opacity duration-700 ${currentSlide === 2 ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}>
+          <div className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
+            {/* Background with gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] via-[#2d2d2d] to-[#4a4a4a]"></div>
+            
+            {/* Animated background pattern */}
+            <div className="absolute inset-0 opacity-10">
+              <div className="absolute top-20 left-10 w-72 h-72 bg-gray-400 rounded-full blur-3xl animate-pulse"></div>
+              <div className="absolute bottom-20 right-10 w-96 h-96 bg-gray-300 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+              <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gray-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
             </div>
 
             {/* Grid pattern overlay */}
@@ -315,8 +488,8 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Slide 2 - Data & Analytics */}
-        <div className={`frame frame_2 absolute inset-0 w-full h-full min-h-screen transition-opacity duration-700 ${currentSlide === 2 ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}>
+        {/* Slide 3 - Data & Analytics */}
+        <div className={`frame frame_3 absolute inset-0 w-full h-full min-h-screen transition-opacity duration-700 ${currentSlide === 3 ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}>
           <div className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
             {/* Background */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700"></div>
@@ -494,8 +667,8 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Slide 3 - Internship Opportunities */}
-        <div className={`frame frame_3 absolute inset-0 w-full h-full min-h-screen transition-opacity duration-700 ${currentSlide === 3 ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}>
+        {/* Slide 4 - Internship Opportunities */}
+        <div className={`frame frame_4 absolute inset-0 w-full h-full min-h-screen transition-opacity duration-700 ${currentSlide === 4 ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}>
           <div className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
             {/* Background */}
             <div className="absolute inset-0 bg-gradient-to-br from-orange-500 via-red-500 to-pink-600"></div>
@@ -655,11 +828,18 @@ const Hero = () => {
           }`}
           aria-label="Go to slide 3"
         />
+        <button 
+          onClick={() => setCurrentSlide(4)}
+          className={`h-1.5 rounded-full cursor-pointer transition-all duration-500 ${
+            currentSlide === 4 ? 'bg-white w-16 sm:w-20' : 'bg-white/40 w-8 sm:w-12 hover:bg-white/60'
+          }`}
+          aria-label="Go to slide 4"
+        />
       </div>
 
       {/* Left/Right Navigation Arrows */}
       <button
-        onClick={() => setCurrentSlide(currentSlide === 1 ? 3 : currentSlide - 1)}
+        onClick={() => setCurrentSlide(currentSlide === 1 ? 4 : currentSlide - 1)}
         className="absolute left-4 sm:left-8 top-1/2 transform -translate-y-1/2 z-20 w-12 h-12 sm:w-14 sm:h-14 bg-white/15 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center text-white hover:bg-white/25 transition-all duration-300 group shadow-lg"
         aria-label="Previous slide"
       >
@@ -669,7 +849,7 @@ const Hero = () => {
       </button>
 
       <button
-        onClick={() => setCurrentSlide(currentSlide === 3 ? 1 : currentSlide + 1)}
+        onClick={() => setCurrentSlide(currentSlide === 4 ? 1 : currentSlide + 1)}
         className="absolute right-4 sm:right-8 top-1/2 transform -translate-y-1/2 z-20 w-12 h-12 sm:w-14 sm:h-14 bg-white/15 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center text-white hover:bg-white/25 transition-all duration-300 group shadow-lg"
         aria-label="Next slide"
       >
