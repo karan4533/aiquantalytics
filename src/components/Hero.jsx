@@ -141,7 +141,7 @@ const Hero = () => {
                     transition={{ duration: 0.6, delay: 0.4 }}
                     className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/95 mb-6 sm:mb-8 lg:mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed tracking-wide drop-shadow px-2 sm:px-0"
                   >
-                    We support you in <span className="font-bold">PoC and Feasibility Studies</span> by helping interns work on real-world problem statements, build practical prototypes, validate ideas, and gain hands-on experience with industry-relevant technologies.
+                    We support you in <span className="font-bold">PoC and Feasibility Studies</span> by evaluating ideas, building quick prototypes, validating technical viability, and assessing business impact to ensure your solution is practical, scalable, and ready for real-world implementation.
                   </motion.p>
 
                   {/* Service Tags */}
@@ -162,6 +162,11 @@ const Hero = () => {
                     </span>
                     <span className="px-4 sm:px-5 py-2 sm:py-2.5 bg-white/15 backdrop-blur-sm border border-white/30 text-white text-xs sm:text-sm font-medium rounded-full">
                       Intelligent Automation
+                    </span><span className="px-4 sm:px-5 py-2 sm:py-2.5 bg-white/15 backdrop-blur-sm border border-white/30 text-white text-xs sm:text-sm font-medium rounded-full">
+                      Prompt Guardrails
+                    </span>
+                    <span className="px-4 sm:px-5 py-2 sm:py-2.5 bg-white/15 backdrop-blur-sm border border-white/30 text-white text-xs sm:text-sm font-medium rounded-full">
+                      SecOps
                     </span>
                   </motion.div>
 
