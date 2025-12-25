@@ -198,7 +198,7 @@ const Admission = () => {
           {[
             { number: '20+', label: 'Courses Available' },
             { number: '100+', label: 'University Partners' },
-            { number: '200000+', label: 'Data Processed' },
+            { number: '2,00,000+', label: 'Data Processed' },
           ].map((stat, index) => (
             <div key={index} className="text-center p-4 bg-white rounded-xl shadow-sm">
               <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-[#1f4037] to-[#99f2c8] bg-clip-text text-transparent mb-2">

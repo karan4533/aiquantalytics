@@ -14,6 +14,30 @@ const Advisory = () => {
 
   const advisors = [
     {
+      name: 'Mrs. G Handini',
+      role: 'Managing Director',
+      company: 'AIQuantalytics',
+      image: '/images/handini.png',
+      email: 'hr@aiquantalytics.in',
+      linkedin: null
+    },
+    {
+      name: 'Mr. Shreyanth S',
+      role: 'Chief Technology Officer',
+      company: 'AIQuantalytics',
+      image: '/images/shreyanth.png',
+      email: 'cto@aiquantalytics.in',
+      linkedin: 'https://www.linkedin.com/in/shreyanth07/'
+    },
+    {
+      name: 'Mr. Nishanth J',
+      role: 'Chief Operations Officer',
+      company: 'AIQuantalytics',
+      image: '/images/nishanth.png',
+      email: 'coo@aiquantalytics.in',
+      linkedin: 'https://www.linkedin.com/in/nishanth-jayaram-23a04011a/'
+    },
+    {
       name: 'Mr. Rajesh PK',
       role: 'Head - COE (Data)',
       company: 'HP Enterprise, Bangalore',
@@ -71,7 +95,7 @@ const Advisory = () => {
   return (
     <>
       {/* Advisory Committee */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gray-50">
+      <section id="advisory" className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             ref={ref}

@@ -60,7 +60,7 @@ const About = () => {
             </div>
 
             <h2 className="text-display font-display text-dark-900 mb-6">
-              We're not just a tech company – we're your innovation partner!
+              We're not just a tech company – we're your innovation partner since 2018!
             </h2>
 
             <p className="text-lg text-dark-600 mb-8 leading-relaxed">

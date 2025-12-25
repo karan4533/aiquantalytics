@@ -5,20 +5,36 @@ import { HiArrowRight, HiLightningBolt, HiUsers, HiClock, HiChartBar, HiDatabase
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(1)
 
-  // Auto-advance slides every 8 seconds
+  // Auto-advance slides every 20 seconds
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev === 3 ? 1 : prev + 1))
-    }, 8000)
+      setCurrentSlide((prev) => (prev === 4 ? 1 : prev + 1))
+    }, 20000)
     return () => clearInterval(timer)
   }, [])
 
   // Client logos for trust signals
   const clientLogos = [
-    '/images/sns.webp',
+     '/images/Dex.jpeg',
     '/images/vit.png',
     '/images/srm.png',
+    '/images/mosaique.jpg',
+    '/images/sathyabama.jpeg',
+    '/images/intellibi.png',
+    '/images/fusionapps.png',
+    '/images/vitap.png',
+    '/images/easwari.png',
+    '/images/gsu.png',
+    '/images/kec.jpeg',
+    '/images/kite.png',
+    '/images/kle.png',
     '/images/kpriet.jpg',
+    '/images/mgr.png',
+    '/images/mukham.jpeg',
+    '/images/ramakrishna.png',
+    '/images/rec.png',
+    '/images/rmkcet.png',
+    '/images/sns.webp',
     '/images/cit.png',
   ]
 
@@ -198,25 +214,39 @@ const Hero = () => {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.7 }}
-                    className="hidden sm:block mt-6 sm:mt-8 lg:mt-10 pt-4 sm:pt-6 lg:pt-8 border-t border-white/20 lg:-ml-4"
+                    className="hidden sm:block mt-6 sm:mt-8 lg:mt-10 pt-4 sm:pt-6 lg:pt-8 border-t border-white/20"
                   >
-                    <p className="text-white/60 text-xs sm:text-sm font-medium mb-2 sm:mb-3 lg:mb-4 text-center lg:text-left">Trusted by leading institutions</p>
-                    <div className="flex items-center justify-center lg:justify-start gap-2 sm:gap-3 lg:gap-4 flex-wrap">
-                      {clientLogos.map((logo, index) => (
-                        <motion.img
-                          key={index}
-                          initial={{ opacity: 0, scale: 0.8 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          transition={{ duration: 0.4, delay: 0.8 + index * 0.1 }}
-                          src={logo}
-                          alt={`Client ${index + 1}`}
-                          className="h-8 sm:h-10 md:h-12 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
-                          loading="lazy"
-                          onError={(e) => {
-                            e.target.style.display = 'none'
-                          }}
-                        />
-                      ))}
+                    <p className="text-white/80 text-xs sm:text-sm font-medium mb-2 sm:mb-3 lg:mb-4 text-center lg:text-left">Trusted by leading institutions</p>
+                    <div className="relative overflow-hidden">
+                      <style>
+                        {`
+                          @keyframes scroll {
+                            0% { transform: translateX(0); }
+                            100% { transform: translateX(-50%); }
+                          }
+                          .scroll-container {
+                            animation: scroll 30s linear infinite;
+                          }
+                          .scroll-container:hover {
+                            animation-play-state: paused;
+                          }
+                        `}
+                      </style>
+                      <div className="flex gap-6 scroll-container">
+                        {[...clientLogos, ...clientLogos].map((logo, index) => (
+                          <div key={index} className="flex-shrink-0">
+                            <img
+                              src={logo}
+                              alt={`Client ${(index % clientLogos.length) + 1}`}
+                              className="h-10 sm:h-12 md:h-14 w-auto object-contain hover:scale-110 transition-all duration-300"
+                              loading="lazy"
+                              onError={(e) => {
+                                e.target.style.display = 'none'
+                              }}
+                            />
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </motion.div>
                 </motion.div>

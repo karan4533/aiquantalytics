@@ -8,18 +8,30 @@ const Footer = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
+  const handleNavClick = (e, scrollTo) => {
+    e.preventDefault()
+    if (scrollTo === 'home') {
+      scrollToTop()
+    } else {
+      const element = document.querySelector(`#${scrollTo}`)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
+    }
+  }
+
   const footerLinks = {
     company: [
-      { name: 'Home', path: '/' },
-      { name: 'About', path: '/#about' },
-      { name: 'Services', path: '/#services' },
-      { name: 'Team', path: '/#team' },
+      { name: 'Home', path: '/', scrollTo: 'home' },
+      { name: 'About', path: '/', scrollTo: 'about' },
+      { name: 'Services', path: '/', scrollTo: 'services' },
+      { name: 'Advisory Board', path: '/', scrollTo: 'advisory' },
     ],
     resources: [
-      { name: 'Products', path: '/#products' },
-      { name: 'Registration', path: '/#registration' },
-      { name: 'Contact', path: '/#contact' },
-      { name: 'FAQ', path: '/#faq' },
+      { name: 'Products', path: '/', scrollTo: 'products' },
+      { name: 'Admission', path: '/', scrollTo: 'registration' },
+      { name: 'Contact', path: '/', scrollTo: 'contact' },
+      { name: 'FAQ', path: '/', scrollTo: 'faq' },
     ],
   }
 
@@ -62,12 +74,13 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerLinks.company.map((link, index) => (
                 <li key={index}>
-                  <Link
-                    to={link.path}
-                    className="text-gray-400 hover:text-[#99f2c8] transition-colors text-sm"
+                  <a
+                    href={`#${link.scrollTo}`}
+                    onClick={(e) => handleNavClick(e, link.scrollTo)}
+                    className="text-gray-400 hover:text-[#99f2c8] transition-colors text-sm cursor-pointer"
                   >
                     {link.name}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -79,12 +92,13 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerLinks.resources.map((link, index) => (
                 <li key={index}>
-                  <Link
-                    to={link.path}
-                    className="text-gray-400 hover:text-[#99f2c8] transition-colors text-sm"
+                  <a
+                    href={`#${link.scrollTo}`}
+                    onClick={(e) => handleNavClick(e, link.scrollTo)}
+                    className="text-gray-400 hover:text-[#99f2c8] transition-colors text-sm cursor-pointer"
                   >
                     {link.name}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -145,7 +159,9 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
             <div>
             <p>© 2025 AIQuantalytics. All rights reserved.</p>
-              <p className="text-xs mt-1">Designed & Developed by Karan</p>
+              <p className="text-xs mt-1">
+                Designed & Developed by <a href="https://github.com/karan4533" target="_blank" rel="noopener noreferrer" className="text-[#99f2c8] hover:text-white transition-colors">Karan</a>
+              </p>
             </div>
             <div className="flex gap-6">
               <a href="#" className="hover:text-[#99f2c8] transition-colors">Privacy Policy</a>
